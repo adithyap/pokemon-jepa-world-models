@@ -1,0 +1,63 @@
+{
+  "args": {
+    "batch_size": 512,
+    "cpu": false,
+    "data_dir": "data/pokemon_jepa",
+    "data_file": "data/part-00000.parquet",
+    "dataset": "milkkarten/pokemon-showdown-replays-merged",
+    "epochs": 8,
+    "format_filter": "gen9pu",
+    "hidden_dim": 128,
+    "latent_dim": 32,
+    "lr": 0.0003,
+    "mask_prob": 0.45,
+    "max_replays": 1000,
+    "output": "results/pokemon_jepa_results.json",
+    "refresh": true,
+    "seed": 7,
+    "split": "train",
+    "weight_decay": 0.0001
+  },
+  "data": {
+    "format_filter": "gen9pu",
+    "parsed_replays": 1000,
+    "raw_path": "data/pokemon_jepa/pokemon_raw_replays_sample.jsonl",
+    "rows": 22459,
+    "rows_path": "data/pokemon_jepa/pokemon_turn_rows.jsonl",
+    "seen_replays": 1000,
+    "source": "milkkarten/pokemon-showdown-replays-merged"
+  },
+  "jepa_embedding_next_action_probe": {
+    "accuracy": 0.4454585930543188,
+    "classes": 4,
+    "top2_accuracy": 0.7691451469278717
+  },
+  "jepa_embedding_winner_probe": {
+    "accuracy": 0.6418076580587712,
+    "auc": 0.7031395792278061,
+    "log_loss": 0.6283667758838097
+  },
+  "masked_future_model": {
+    "device": "cuda",
+    "test_full_future_mse": 0.5729882253540887
+  },
+  "n_features": 17,
+  "n_rows": 22459,
+  "next_action_counts": {
+    "0": 590,
+    "1": 13930,
+    "2": 7551,
+    "3": 388
+  },
+  "raw_feature_next_action_probe": {
+    "accuracy": 0.46527159394479073,
+    "classes": 4,
+    "top2_accuracy": 0.7787177203918076
+  },
+  "raw_feature_winner_probe": {
+    "accuracy": 0.6582813891362422,
+    "auc": 0.7285361540556047,
+    "log_loss": 0.6074613016477166
+  },
+  "winner_balance_p1": 0.5100850438576963
+}

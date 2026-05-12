@@ -1,0 +1,66 @@
+{
+  "dilemmas": [
+    {
+      "full_state": "  P1 [1]: lycanroc        | HP:  88% | Item: focussash    | Moves: stealthrock\n  P1 [2]: goodra          | HP:  37% | Item: none         | Moves: knockoff, suckerpunch\n  P1 [3]: minior          | HP: 100% | Item: none         | Moves: \n  P1 [4]: zoroark         | HP: 100% | Item: none         | Moves: \n  P1 [5]: sandslashalola  | HP: 100% | Item: none         | Moves: \n  P1 [6]: arcanine        | HP: 100% | Item: none         | Moves: \n  P2 [1]: snorlax         | HP:  38% | Item: none         | Moves: bellydrum\n  P2 [2]: exeggutor       | HP: 100% | Item: none         | Moves: \n  P2 [3]: carbink         | HP: 100% | Item: none         | Moves: \n  P2 [4]: articunogalar   | HP: 100% | Item: none         | Moves: \n  P2 [5]: dusknoir        | HP:   0% | Item: none         | Moves: willowisp, trickroom, poltergeist\n  P2 [6]: grimmsnarl      | HP: 100% | Item: none         | Moves: ",
+      "supervised_top3": [
+        "arcanine",
+        "zoroark",
+        "taurospaldeablaze"
+      ],
+      "supervised_win": 0.00752268685027957,
+      "jepa_top3": [
+        "uxie",
+        "arcanine",
+        "minior"
+      ],
+      "jepa_win": 0.2846195697784424,
+      "delta": 0.2770968829281628
+    },
+    {
+      "full_state": "  P1 [1]: hippopotas      | HP: 100% | Item: none         | Moves: \n  P1 [2]: sandaconda      | HP: 100% | Item: none         | Moves: \n  P1 [3]: sandslash       | HP: 100% | Item: none         | Moves: \n  P1 [4]: lycanroc        | HP: 100% | Item: none         | Moves: \n  P1 [5]: quaxwell        | HP: 100% | Item: none         | Moves: \n  P1 [6]: houndstone      | HP: 100% | Item: none         | Moves: \n  P2 [1]: ambipom         | HP: 100% | Item: none         | Moves: \n  P2 [2]: uxie            | HP: 100% | Item: none         | Moves: \n  P2 [3]: tatsugiri       | HP: 100% | Item: none         | Moves: \n  P2 [4]: shaymin         | HP: 100% | Item: none         | Moves: \n  P2 [5]: taurospaldeablaze | HP: 100% | Item: none         | Moves: \n  P2 [6]: florges         | HP: 100% | Item: none         | Moves: ",
+      "supervised_top3": [
+        "grumpig",
+        "houndstone",
+        "froslass"
+      ],
+      "supervised_win": 0.44146254658699036,
+      "jepa_top3": [
+        "houndstone",
+        "hippopotas",
+        "arcanine"
+      ],
+      "jepa_win": 0.7761290669441223,
+      "delta": 0.33466652035713196
+    },
+    {
+      "full_state": "  P1 [1]: cramorant       | HP: 100% | Item: none         | Moves: \n  P1 [2]: toucannon       | HP: 100% | Item: none         | Moves: \n  P1 [3]: glaceon         | HP: 100% | Item: none         | Moves: \n  P1 [4]: electivire      | HP: 100% | Item: none         | Moves: \n  P1 [5]: arboliva        | HP: 100% | Item: none         | Moves: pollenpuff\n  P1 [6]: honchkrow       | HP: 100% | Item: none         | Moves: \n  P2 [1]: rhydon          | HP: 100% | Item: none         | Moves: swordsdance\n  P2 [2]: mudsdale        | HP: 100% | Item: none         | Moves: \n  P2 [3]: hariyama        | HP: 100% | Item: none         | Moves: \n  P2 [4]: exeggutoralola  | HP: 100% | Item: none         | Moves: \n  P2 [5]: trevenant       | HP: 100% | Item: none         | Moves: \n  P2 [6]: uxie            | HP:   0% | Item: none         | Moves: stealthrock",
+      "supervised_top3": [
+        "honchkrow",
+        "toucannon",
+        "electivire"
+      ],
+      "supervised_win": 0.12098105996847153,
+      "jepa_top3": [
+        "cryogonal",
+        "toucannon",
+        "toedscruel"
+      ],
+      "jepa_win": 0.19054386019706726,
+      "delta": 0.06956280022859573
+    }
+  ],
+  "divergence": [
+    {
+      "full_state": "  P1 [1]: salazzle        | HP: 100% | Item: none         | Moves: \n  P1 [2]: bellibolt       | HP: 100% | Item: none         | Moves: \n  P1 [3]: cryogonal       | HP: 100% | Item: none         | Moves: \n  P1 [4]: grimmsnarl      | HP: 100% | Item: none         | Moves: \n  P1 [5]: taurospaldeaaqua | HP: 100% | Item: none         | Moves: \n  P1 [6]: rotommow        | HP: 100% | Item: none         | Moves: \n  P2 [1]: froslass        | HP: 100% | Item: none         | Moves: \n  P2 [2]: coalossal       | HP: 100% | Item: none         | Moves: \n  P2 [3]: screamtail      | HP: 100% | Item: none         | Moves: \n  P2 [4]: grimmsnarl      | HP: 100% | Item: none         | Moves: \n  P2 [5]: dusknoir        | HP: 100% | Item: none         | Moves: \n  P2 [6]: clawitzer       | HP: 100% | Item: none         | Moves: ",
+      "prob_j": 0.0046650078147649765,
+      "prob_s": 0.7160928249359131,
+      "actual": "P2"
+    },
+    {
+      "full_state": "  P1 [1]: alcremierainbowswirl | HP: 100% | Item: none         | Moves: \n  P1 [2]: gastrodoneast   | HP:   0% | Item: none         | Moves: spikes, clearsmog\n  P1 [3]: coalossal       | HP:   0% | Item: none         | Moves: \n  P1 [4]: rotommow        | HP:  28% | Item: none         | Moves: voltswitch, leafstorm\n  P1 [5]: taurospaldeablaze | HP:  45% | Item: none         | Moves: bulkup, ragingbull\n  P1 [6]: braviaryhisui   | HP: 100% | Item: none         | Moves: \n  P2 [1]: scyther         | HP:  77% | Item: none         | Moves: swordsdance, trailblaze\n  P2 [2]: hattrem         | HP:   3% | Item: none         | Moves: psychic, gigadrain\n  P2 [3]: bombirdier      | HP: 100% | Item: none         | Moves: \n  P2 [4]: arcanine        | HP:  64% | Item: none         | Moves: closecombat\n  P2 [5]: decidueyehisui  | HP: 100% | Item: none         | Moves: defog\n  P2 [6]: rhydon          | HP: 100% | Item: none         | Moves: ",
+      "prob_j": 0.10415224730968475,
+      "prob_s": 0.7297791838645935,
+      "actual": "P2"
+    }
+  ]
+}

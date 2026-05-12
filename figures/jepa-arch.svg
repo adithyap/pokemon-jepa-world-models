@@ -1,0 +1,56 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Pokemon JEPA architecture</title>
+  <desc id="desc">A 12-token Pokemon battle state flows through a Transformer encoder into a latent state with next-HP, winner, and masked-species heads.</desc>
+  <rect width="960" height="540" fill="#ffffff" />
+  <defs>
+  <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <polygon points="0 0, 10 4, 0 8" fill="#64748b" />
+  </marker>
+</defs>
+
+  <rect x="40" y="165" width="190" height="190" rx="10" fill="#eaf2ff" stroke="#1f6feb" stroke-width="2" />
+  <text x="135" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#1f2933">Input State</text>
+  <text x="135" y="230" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5f6b7a">12 Pokemon object tokens</text>
+<text x="135" y="248" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5f6b7a">species id + HP + status</text>
+<text x="135" y="266" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5f6b7a">optional item/move ids</text>
+  <rect x="75" y="294" width="120" height="38" rx="8" fill="#ffffff" stroke="#9bbcf7" stroke-width="1" />
+  <text x="135" y="318" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#1f6feb">x_t</text>
+
+  <path d="M 230 260 L 285 260" stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)" />
+
+  <rect x="285" y="130" width="235" height="260" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2" />
+  <text x="402.5" y="166" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#1f2933">Transformer Encoder</text>
+  <text x="402.5" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5f6b7a">self-attention over slots</text>
+<text x="402.5" y="218" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5f6b7a">active threats see bench answers</text>
+<text x="402.5" y="236" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5f6b7a">2 layers / 4 heads in study</text>
+<text x="402.5" y="254" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5f6b7a">3 layers / 8 heads in teambuilder</text>
+  <rect x="330" y="315" width="145" height="42" rx="8" fill="#ffffff" stroke="#fdba74" stroke-width="1" />
+  <text x="402.5" y="341" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#9a3412">object interactions</text>
+
+  <path d="M 520 260 L 585 260" stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)" />
+
+  <rect x="585" y="215" width="130" height="90" rx="20" fill="#1f6feb" stroke="#0b3b8f" stroke-width="2" />
+  <text x="650" y="253" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#ffffff">Latent z</text>
+  <text x="650" y="278" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#dbeafe">128-256 dims</text>
+
+  <path d="M 715 242 L 780 132" stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)" />
+  <path d="M 715 260 L 780 260" stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)" />
+  <path d="M 715 278 L 780 388" stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)" />
+
+  <rect x="780" y="78" width="150" height="108" rx="10" fill="#e8f6ef" stroke="#1f7a4d" stroke-width="2" />
+  <text x="855" y="111" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#1f2933">JEPA Head</text>
+  <text x="855" y="139" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" fill="#2f6f4e">predict HP(t+1)</text>
+<text x="855" y="157" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" fill="#2f6f4e">12-slot regression</text>
+
+  <rect x="780" y="206" width="150" height="108" rx="10" fill="#fff1f0" stroke="#b42318" stroke-width="2" />
+  <text x="855" y="239" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#1f2933">Winner Head</text>
+  <text x="855" y="267" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" fill="#8a241d">predict final</text>
+<text x="855" y="285" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" fill="#8a241d">battle outcome</text>
+
+  <rect x="780" y="334" width="150" height="108" rx="10" fill="#fff8df" stroke="#946200" stroke-width="2" />
+  <text x="855" y="367" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#1f2933">Mask Head</text>
+  <text x="855" y="395" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" fill="#745008">fill missing</text>
+<text x="855" y="413" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" fill="#745008">team slot</text>
+
+  <text x="480" y="500" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#5f6b7a">The key pressure: useful latents must explain how the board moves, not only who won.</text>
+</svg>
