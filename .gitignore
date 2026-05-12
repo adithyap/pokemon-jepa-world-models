@@ -4,6 +4,8 @@ __pycache__/
 .env
 
 data/
+results/
+figures/
 *.pt
 *.pth
 *.ckpt
