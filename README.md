@@ -1,42 +1,12 @@
 # Pokemon JEPA World Models
 
-Reproduction code for a small JEPA-style world-model study on Pokemon Showdown
-replays.
+Action-conditioned world-model experiments on Pokemon Showdown replays.
 
-## Setup
+[Blog post](https://adithya.io/blog/pokemon-jepa-world-models)
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
+Run V4 with a replay JSONL file (the V3 study script can download and cache replays):
+
+```sh
 pip install -r requirements.txt
+python code/run_pokemon_jepa_v4_study.py --raw-replays-file path/to/replays.jsonl
 ```
-
-## Run
-
-Main replay-budget study:
-
-```bash
-python code/run_pokemon_jepa_v3_study.py \
-  --max-replays 1000 \
-  --budgets 25,50,100,250,500 \
-  --epochs 8 \
-  --refresh
-```
-
-Latent-space and HP-delta plots:
-
-```bash
-python code/generate_visual_maps.py \
-  --max-replays 1000 \
-  --train-replays 500 \
-  --epochs 8
-```
-
-SVG schematics:
-
-```bash
-python code/generate_svg.py
-```
-
-Outputs are written to `results/` and `figures/`. Cached replay data is written
-to `data/`; all three directories are ignored by git.
